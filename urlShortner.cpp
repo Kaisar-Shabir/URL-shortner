@@ -29,7 +29,7 @@ int UrltoId(string url) {
     int len = url.length();
     int index = 0;
     for(int i = 0; i < len; i++) {
-        index += getPos(url[i]) * pow(mod, i);
+        index += getPos(url[len - i - 1]) * pow(mod, i);
     }
     return index;
 }
